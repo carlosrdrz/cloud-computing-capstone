@@ -1,4 +1,4 @@
-package com.github.carlosrdrz.capstone.task1
+package com.github.carlosrdrz.capstone.task1.group1
 
 import java.lang.Iterable
 
@@ -8,7 +8,7 @@ import org.apache.hadoop.mapreduce.Reducer
 import scala.collection.JavaConverters._
 import scala.collection.mutable
 
-class TopTenToDynamoReducer extends Reducer[Text, IntWritable, Text, IntWritable] {
+class TopTenReducer extends Reducer[Text, IntWritable, Text, IntWritable] {
   val results = new mutable.TreeMap[String, Int]
 
   override def reduce(key: Text, values: Iterable[IntWritable], context: Reducer[Text, IntWritable, Text, IntWritable]#Context): Unit = {

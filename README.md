@@ -9,7 +9,12 @@ $ ./clean.rb /mnt/data/aviation/airline_ontime /mnt/data/cleaned
 $ aws s3 sync /mnt/data/cleaned s3://datatestrdrz/capstone
 ```
 
-## 2. Task1 Group1
+## 2. Task1 Group1 1
 ```
-$ hadoop jar capstone.jar com.github.carlosrdrz.capstone.task1.TopAirports s3://datatestrdrz/capstone/ s3://datatestrdrz/results/task1/top_airports
+$ hadoop jar capstone.jar com.github.carlosrdrz.capstone.task1.group1.TopAirports s3://datatestrdrz/capstone/ s3://datatestrdrz/results/task1/top_airports
+```
+
+## 3. Task1 Group1 2
+```
+$ hadoop jar capstone.jar com.github.carlosrdrz.capstone.task1.group1.TopAirportsByOnTimeArrival s3://datatestrdrz/capstone/ s3://datatestrdrz/results/task1/top_airports_by_ontime_arrival
 ```

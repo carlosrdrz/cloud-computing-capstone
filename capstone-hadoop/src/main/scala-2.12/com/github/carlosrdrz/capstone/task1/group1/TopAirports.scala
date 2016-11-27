@@ -1,4 +1,4 @@
-package com.github.carlosrdrz.capstone.task1
+package com.github.carlosrdrz.capstone.task1.group1
 
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.Path
@@ -13,8 +13,8 @@ object TopAirports {
     val conf = new Configuration()
     val job = Job.getInstance(conf, "Top Airports")
 
-    job.setMapperClass(classOf[SplitterMapper])
-    job.setReducerClass(classOf[TopTenToDynamoReducer])
+    job.setMapperClass(classOf[AirportsMapper])
+    job.setReducerClass(classOf[TopTenReducer])
 
     job.setOutputKeyClass(classOf[Text])
     job.setOutputValueClass(classOf[IntWritable])
