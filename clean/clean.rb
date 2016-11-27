@@ -8,7 +8,7 @@ source_dir = ARGV[0]
 dest_dir = ARGV[1]
 
 # Keys to select from the CSV files
-keys = %w(DayOfWeek Origin Dest DepDelayMinutes ArrDelayMinutes)
+keys = %w(FlightDate DayOfWeek FlightNum Origin Dest DepDelayMinutes ArrDelayMinutes UniqueCarrier)
 
 files = Dir["#{source_dir}/**/*.zip"]
 Parallel.map(files, in_processes: 38) do |file|
